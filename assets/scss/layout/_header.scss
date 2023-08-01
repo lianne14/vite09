@@ -1,4 +1,29 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+.nav{
+  background-color: $color1;
+
+  img{
+    width: 80px;
+    padding: 16px 0;
+  }
+}
+
+.inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  ul{
+    display: flex;
+    a{
+      margin-right: 64px;
+      color: $color2;
+      text-align: center;
+
+      &:hover{
+        color: $color1-2;
+        font-weight: $font-weightm;
+      }
+    }
+  }
+
 }
