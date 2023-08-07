@@ -1,0 +1,107 @@
+.optical{
+    display: flex;
+    img{
+        width: 50%;
+        
+        // @include mobile(){
+        //     height: auto;
+        //     height: 136px;
+        // }這邊不知道要怎麼樣才可以放大
+    }
+    
+}
+.product{
+    h2{
+        font-weight: $font-weightm;
+    }
+    h3{
+        margin-bottom: $num*4;
+    }
+    ul{
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-between;
+        li{
+            width: calc(100%/4 - 24px);
+            .infor{
+                display: flex;
+                justify-content: space-between;
+                .price{
+                    color: $secondary-color;
+                    font-weight: $font-weightm;
+                }
+            }
+        }
+        .productbtn{
+            margin-right: auto;
+            margin-bottom: $num*10;
+            // .button1{
+            //     color: $orange-600;
+            // } 顏色不知道要怎麼樣填充才可以
+        }
+    }
+}
+
+
+@include pad{
+    .product ul{
+        display: flex;
+        flex-wrap: wrap;
+        li{
+            width: calc(100%/2 - 1em);
+        }
+
+        button{
+            margin-bottom: 40px;
+            width: $num*3;
+            height: $num*3;
+        }
+      
+    }          
+}
+
+@include mobile{
+    .product ul{
+        
+        display: flex;
+        flex-direction: column;
+        li{
+          width: 100%;  
+        }
+
+        button{
+            margin-bottom: 40px;
+            width: $num*3;
+            height: $num*3;
+        }
+
+        // .button1{
+        //     color: $orange-600;
+        // }        
+    }          
+}
+
+.page{
+    ul{
+        display: flex;
+        justify-content: center;
+        margin-bottom: $num*10;
+
+        li a{
+            padding: 11px;
+            color: $gray;
+            border: 1px solid $gray;
+        
+            &:hover {
+                background-color: $dark;
+                color: $white;
+            }
+            // .nextpage{
+            // background: #F2F2F2;
+            // }沒有辦法把上一頁設定成淺灰色
+        }
+
+        
+    }
+}
+  

@@ -1,1 +1,24 @@
-/*這編寫全域設定*/
+  
+// //建立
+//   @mixin + 名稱 {
+//     @media (裝置寬度) {
+//         @content
+//     }
+// }
+
+// //插入
+//  @include + 名稱(){
+//    內容
+//  }
+
+@mixin pad{
+    @media(max-width: 992px){
+      @content;
+    }
+  }
+  
+  @mixin mobile{
+    @media(max-width: 768px){
+      @content;
+    }
+  }

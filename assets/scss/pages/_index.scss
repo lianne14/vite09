@@ -1,25 +1,252 @@
-.banner {
-  background: url(../images/home-header.png) center top no-repeat;
-  background-size:cover;
+/*banner item2*/
+.banner{
+    background: url(../images/home-header.png) center top;
+    background-size:cover;
+}
 
-  .content{
+.banner .content{
     padding: 296px 0;
     text-align: right;
-    color: $color1;
-  }
+}
 
-  .cta{
-    background-color: $color1;
-    width: $num*13;
+.banner .cta{
+    background-color: #AA0601;
+    width: 104px;
     margin-left: auto;
     padding: 6px;
-    a{
-      text-align: center;
-      color: $color2;
-      font-weight: $font-weightm;
-      // &:hover{
+}
 
-      // }
+.banner .cta a{
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+
+@include mobile(){
+    .banner{
+        background: url(../images/home-header-sm.png) center top;
+        background-size: cover;
+    }
+
+    .content h1{
+       font-size: 24px;
+    }
+    
+    .content h3{
+        font-size: 16px;
+     }
+
+}
+
+/*prof item3*/
+.prof{
+    background-color: #FBF2F2;
+    text-align: center;
+
+    ul{
+      display: flex;
+      li{
+        width: calc(100%/4 - 2em);
+        margin: 0 auto;
+        p{
+          text-align: left;
+        }
+        img{
+          width: 84px;
+        }
+      }
+    }
+  }
+
+@include pad(){
+    .prof ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+        li{
+          width: calc(100%/2 - 2em);
+          p{
+            margin-bottom: 32px;
+        }
+      }
+    }
+ }
+
+ @include mobile(){
+    .prof ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+        li{
+          margin-bottom: 32px;
+          width: 86%;
+          h4{
+            font-size: 24px;
+          }
+      }
+    }
+ }
+
+
+/*prod item4*/
+.prod{
+  width: 100%;
+    text-align: center;
+    ul{
+      display: flex;
+  }
+}
+
+@include pad(){
+    .prod{ width: 100%;
+        margin-top: 80px;
+        ul{
+          display: flex;
+          flex-wrap: wrap;
+          margin: 0 80px 160px;
+      }
+    }
+ }
+
+ @include mobile(){
+    .prod ul{
+      width: 100%;
+        margin: 0;
+        margin-bottom: 80px;
+        h3{
+          font-size: 48px;
+          font-weight: 900;
+      }
+    }
+ }
+
+
+
+/*glasses item5*/
+.glasses{
+    background-image: url(../images/index-bg.png);
+    background-repeat: no-repeat;
+    h2{
+      text-align: center;
+    }
+    ul{
+      display: flex;
+      li{
+        background-color: #fff;
     }
   }
 }
+
+@include pad(){
+    .glasses ul{
+        flex-wrap: wrap;
+        li{
+          margin-bottom: 24px;
+          h3{
+            font-size: 48px;
+            font-weight: 900;
+        }
+      }
+    }
+ }
+
+
+/*recom item6*/
+.recom ul{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    li{
+      border: 1px solid #DEE2E6;
+      border-radius: 4px;
+      box-shadow:0 1px 2px #b2b2b2;
+      width: calc(100%/4 - 1em);
+      
+      .text{
+        height: 205px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        span{
+          color: #707070;
+          font-size: 14px;
+      }
+    }
+  }
+}
+
+@include pad(){
+    .recom ul{
+        flex-wrap: wrap;
+        li{
+          width: 48%;
+          margin-bottom: 24px;
+      }
+    }
+  }
+
+  @include mobile() {
+    .recom ul{
+      flex-wrap: wrap;
+      li{
+        width: 100%;
+        margin-bottom: 24px;
+    }
+  }
+}
+
+.footer{
+    width: 100%;
+    background-color: #AA0601;
+    color: #fff;
+}
+
+/*form item7*/
+.form{
+    background-color: #FBF2F2;
+}
+
+form{
+    margin: 0 auto;
+    width: calc(100%/2);
+    input{
+      background-color: none;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 1px solid #000;
+    }
+  }
+  .comment {
+      width: 99%;
+      min-height: 200px;
+    }
+
+  .btn{
+    padding: 16px 0;
+    text-align: center;
+    width: 50%;
+    border: none;
+    background-color: #AA0601;
+    color: #fff;
+    margin: 20px auto;
+    display: block;
+
+    &:hover{
+    background-color: #fff;
+    color: #AA0601;
+    }
+  }
+
+
+  @include mobile(){
+    form{
+        width: 100%;
+        margin-bottom: 16px;
+    }
+  }

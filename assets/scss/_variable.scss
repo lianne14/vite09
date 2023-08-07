@@ -9,12 +9,17 @@ $font-family: 'Noto Sans TC', sans-serif;
 $line-height: 1.5;
 
 /*color*/
-$color1: #AA0601;
-$color2: #fff;
-$color3: #000;
-$color1-2: #DE706D;
+$primary-color: #650300;
+$secondary-color: #AA0601;
+$dark: #000;
+$white: #fff;
+$light: #DE706D;
+$gray: #707070;
+$gray-300: #DCDCDC;
 
-$bgcolor1: #FBF2F2;
+$pink: #FBF2F2;
+$orange-900: #5F3E2D;
+$orange-600: #B75929;
 
 //font-weight
 $font-weightl: 900;
@@ -25,4 +30,3 @@ $font-weightr: 400;
 
 /*space*/
 $padding-spaces: 0 16px;
-

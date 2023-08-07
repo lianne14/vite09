@@ -1,29 +1,74 @@
-.nav{
-  background-color: $color1;
-
-  img{
-    width: 80px;
-    padding: 16px 0;
-  }
+.container{
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 12px;
 }
 
-.inner{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  ul{
+/*nav item1*/
+.nav{
+  width: 100%;
+  background-color: $secondary-color;
+  .inner{
     display: flex;
-    a{
-      margin-right: 64px;
-      color: $color2;
-      text-align: center;
-
-      &:hover{
-        color: $color1-2;
-        font-weight: $font-weightm;
+    justify-content: space-between;
+    align-items: center;
+    img{
+      width: 80px;
+      padding: 16px 0;
+    }
+    ul{
+      display: flex;
+      li a{
+        text-decoration: none;
+        margin-left: 64px;
+        color: $white;
+        text-align: center;
       }
     }
   }
-
 }
+
+@include pad(){
+  .inner ul{
+    justify-content: flex-end;
+    li{
+      font-size: 20px;
+    }
+  }
+}
+
+
+@include mobile(){
+  .nav .container{
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .inner{
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+
+    ul{
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      width: 100%;
+      li{
+        font-size: $num*3;
+        border: 1px solid $white;
+        display: flex;
+        flex-wrap: wrap;
+        a{
+          margin: 0 auto;
+          padding: 12px 62px;
+        }
+      }
+    }
+  }
+}
+// 手機板nav:
+// 這邊我試好多次了，不知道為什麼W3有順利寫好，貼過來改寫SCSS就沒辦法

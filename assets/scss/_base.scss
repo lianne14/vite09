@@ -11,6 +11,7 @@ body{
 
 a{
     text-decoration: none;
+    color: $white;
 }
 
 img{
@@ -24,32 +25,70 @@ img{
 }
 
 //font-size
-h1, .h1{
+h1, .h1, .fs-64{
     font-size: 64px;
 }
 
-h2, .h2{
+h2, .h2, .fs-48{
     font-size: 48px;
 }
 
-h3, .h3{
+h3, .h3, .fs-36{
     font-size: 36px;
 }
 
-h4, .h4{
+h4, .h4, .fs-24{
     font-size: 24px;
 }
 
-h5, .h5{
+h5, .h5, .fs-20{
     font-size: 20px;
 }
 
-p, li {
+p, li, .fs-16{
     font-size: 16px;
 }
 
 
-//space
+@include mobile(){
+
+    .fs-64{
+        font-size: 48px;
+    }
+    
+    .fs-48{
+        font-size: 24px;
+    }
+    
+    .fs-36{
+        font-size: 16px;
+    }
+}
+
+
+/* font-style */
+.italic{
+    font-style: italic;
+}
+
+
+/* text-align */
+.text-c{
+    text-align: center;
+}
+
+.text-l{
+    text-align: left;
+}
+
+
+/*space*/
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
 .space {
     &-l{
         padding: 80px 0;
@@ -57,5 +96,63 @@ p, li {
 
     &-m{
         padding: 48px 0;
+    }
+}
+
+.pb-m{
+    padding-bottom: 32px;
+
+    &-s{
+        padding-bottom: 16px;
+    }
+
+    &-xs{
+        padding-bottom: 8px;
+    }
+}
+
+
+//btn
+button {
+    border: none;
+    background-color: none;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.button-orange {
+    color: $orange-900;
+}
+
+
+
+
+//color
+.primary-color{
+    color: $primary-color;
+}
+
+.secondary-color{
+    color: $secondary-color;
+}
+
+.dark{
+    color: $dark;
+}
+
+.light{
+    color: $white;
+}
+
+/* font-weight */
+.fw-l{
+    font-weight: $font-weightl;
+
+    &-m{
+        font-weight: $font-weightm;
+    }
+
+    &-s{
+        font-weight: $font-weightr;
     }
 }

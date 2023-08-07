@@ -3,7 +3,7 @@
 
     h2{
         font-weight: $font-weightl;
-        border-left: $num solid $color1;
+        border-left: $num solid $primary-color;
         padding-left: $num*2;
         margin-bottom: $num*4;
     }
@@ -14,5 +14,9 @@
 
     li{
         margin: $num*3 0 $num*4 0 ;
+    }
+
+    @include pad(){
+        width: 100%;
     }
 }
